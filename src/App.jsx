@@ -11,7 +11,7 @@ function App() {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
       setActiveSection(sectionId)
     }
   }
@@ -48,7 +48,7 @@ function App() {
         "95% reduction in compliance errors", 
         "60% faster monthly reporting"
       ],
-      image: "/dashboard1.png"
+      image: "/dashboard1.webp"
     },
     {
       title: "Startup Financial Restructuring",
@@ -60,7 +60,7 @@ function App() {
         "Secured €500K in additional funding",
         "Improved cash flow by 65%"
       ],
-      image: "/dashboard2.jpg"
+      image: "/dashboard2.webp"
     }
   ]
 
@@ -114,17 +114,17 @@ function App() {
                 <Button 
                   variant="secondary" 
                   size="lg" 
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 hover:scale-105 transition-all duration-300 hover:shadow-lg"
                   onClick={() => window.open('/cv-cihat-kaya.pdf', '_blank')}
                 >
-                  <Download className="w-5 h-5" />
+                  <Download className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
                   Download CV
                 </Button>
               </div>
               <div className="flex justify-center">
                 <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-300 shadow-2xl">
                   <img 
-                    src="/cihat-headshot.jpg" 
+                    src="/cihat-headshot.webp" 
                     alt="Cihat Kaya Professional Headshot" 
                     className="w-full h-full object-cover"
                   />
@@ -142,9 +142,9 @@ function App() {
             About Me: Your Strategic Partner for Financial Clarity
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <CardHeader>
-                <Target className="w-12 h-12 text-blue-600 mb-4" />
+                <Target className="w-12 h-12 text-blue-600 mb-4 transition-transform duration-300 hover:scale-110" />
                 <CardTitle className="text-blue-800">My Mission</CardTitle>
               </CardHeader>
               <CardContent>
@@ -154,9 +154,9 @@ function App() {
               </CardContent>
             </Card>
             
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <CardHeader>
-                <Lightbulb className="w-12 h-12 text-blue-600 mb-4" />
+                <Lightbulb className="w-12 h-12 text-blue-600 mb-4 transition-transform duration-300 hover:scale-110" />
                 <CardTitle className="text-blue-800">Unique Approach</CardTitle>
               </CardHeader>
               <CardContent>
@@ -168,9 +168,9 @@ function App() {
               </CardContent>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <CardHeader>
-                <Award className="w-12 h-12 text-blue-600 mb-4" />
+                <Award className="w-12 h-12 text-blue-600 mb-4 transition-transform duration-300 hover:scale-110" />
                 <CardTitle className="text-blue-800">Professional Values</CardTitle>
               </CardHeader>
               <CardContent>
@@ -206,9 +206,9 @@ function App() {
             Core Expertise: Driving Financial Excellence
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-6 hover:shadow-lg transition-all hover:scale-105">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <CardHeader>
-                <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4 transition-transform duration-300 hover:scale-110" />
                 <CardTitle className="text-blue-800">Dutch Tax Compliance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -221,9 +221,9 @@ function App() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-all hover:scale-105">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <CardHeader>
-                <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-4 transition-transform duration-300 hover:scale-110" />
                 <CardTitle className="text-blue-800">Business Analysis</CardTitle>
               </CardHeader>
               <CardContent>
@@ -236,9 +236,9 @@ function App() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-all hover:scale-105">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <CardHeader>
-                <TrendingUp className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <TrendingUp className="w-12 h-12 text-blue-600 mx-auto mb-4 transition-transform duration-300 hover:scale-110" />
                 <CardTitle className="text-blue-800">Investment Strategies</CardTitle>
               </CardHeader>
               <CardContent>
@@ -262,16 +262,16 @@ function App() {
               ))}
             </div>
             <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <FileText className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                <FileText className="w-8 h-8 text-blue-600 mx-auto mb-2 transition-transform duration-300 hover:scale-110" />
                 <div className="font-semibold text-blue-800">Certified Financial Analyst</div>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <Shield className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                <Shield className="w-8 h-8 text-blue-600 mx-auto mb-2 transition-transform duration-300 hover:scale-110" />
                 <div className="font-semibold text-blue-800">Dutch Tax Specialist</div>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                <Award className="w-8 h-8 text-blue-600 mx-auto mb-2 transition-transform duration-300 hover:scale-110" />
                 <div className="font-semibold text-blue-800">AI Integration Expert</div>
               </div>
             </div>
@@ -586,15 +586,7 @@ function App() {
               <Linkedin className="w-5 h-5" />
               LinkedIn
             </Button>
-            <Button 
-              variant="secondary" 
-              size="lg" 
-              className="flex items-center gap-2 w-full sm:w-auto min-w-[140px] px-6 py-3"
-              onClick={() => window.open("https://www.glodinasfinance.nl", "_blank")}
-            >
-              <Globe className="w-5 h-5" />
-              Website
-            </Button>
+
           </div>
         </div>
       </section>
