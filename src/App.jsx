@@ -72,10 +72,10 @@ function App() {
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold text-slate-800">Cihat Kaya</h1>
             <div className="hidden md:flex space-x-6">
-              {['About', 'Expertise', 'Case Studies', 'Experience', 'Testimonials', 'Contact'].map((item) => (
+              {["About", "Expertise", "Case Studies", "Experience", "Testimonials", "Contact"].map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                  onClick={() => scrollToSection(item.toLowerCase().replace(" ", "-"))}
                   className="text-slate-600 hover:text-blue-600 transition-colors"
                 >
                   {item}
@@ -115,7 +115,7 @@ function App() {
                   variant="secondary" 
                   size="lg" 
                   className="flex items-center gap-2 hover:scale-105 transition-all duration-300 hover:shadow-lg"
-                  onClick={() => window.open('/cv-cihat-kaya.pdf', '_blank')}
+                  onClick={() => window.open("/cv-cihat-kaya.pdf", "_blank")}
                 >
                   <Download className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
                   Download CV
@@ -127,6 +127,7 @@ function App() {
                     src="/cihat-headshot.webp" 
                     alt="Cihat Kaya Professional Headshot" 
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -255,22 +256,22 @@ function App() {
           <div className="mt-12 text-center">
             <h3 className="text-2xl font-semibold mb-6 text-slate-800">Languages & Certifications</h3>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              {['Nederlands (Native)', 'English (Professional)', 'Roemeens (Native)', 'Portuguese (Elementary)', 'Spanish (Elementary)', 'Turkish (Elementary)'].map((lang) => (
-                <Badge key={lang} variant="secondary" className="px-4 py-2 text-sm">
+              {["Nederlands (Native)", "English (Professional)", "Roemeens (Native)", "Portuguese (Elementary)", "Spanish (Elementary)", "Turkish (Elementary)"].map((lang) => (
+                <Badge key={lang} variant="secondary" className="px-4 py-2 text-sm hover:scale-105 transition-transform duration-200">
                   {lang}
                 </Badge>
               ))}
             </div>
             <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer">
                 <FileText className="w-8 h-8 text-blue-600 mx-auto mb-2 transition-transform duration-300 hover:scale-110" />
                 <div className="font-semibold text-blue-800">Certified Financial Analyst</div>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer">
                 <Shield className="w-8 h-8 text-blue-600 mx-auto mb-2 transition-transform duration-300 hover:scale-110" />
                 <div className="font-semibold text-blue-800">Dutch Tax Specialist</div>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+              <div className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer">
                 <Award className="w-8 h-8 text-blue-600 mx-auto mb-2 transition-transform duration-300 hover:scale-110" />
                 <div className="font-semibold text-blue-800">AI Integration Expert</div>
               </div>
@@ -306,21 +307,23 @@ function App() {
                       <div>
                         <h4 className="font-semibold text-slate-800 mb-3">Results:</h4>
                         <div className="space-y-2">
-                          {study.results.map((result, idx) => (
-                            <div key={idx} className="flex items-center gap-2">
-                              <ChevronRight className="w-5 h-5 text-green-600" />
-                              <span className="text-slate-600 font-medium">{result}</span>
+                          {study.results.map((result, i) => (
+                            <div key={i} className="flex items-center text-slate-600">
+                              <ChevronRight className="w-5 h-5 text-blue-600 mr-2" />
+                              {result}
                             </div>
                           ))}
                         </div>
                       </div>
                     </CardContent>
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="flex justify-center items-center">
                     <img 
                       src={study.image} 
-                      alt={`${study.title} Dashboard`}
-                      className="w-full h-64 object-cover rounded-lg shadow-lg"
+                      alt={study.title} 
+                      className="rounded-lg shadow-lg max-h-64 w-auto object-cover"
+                      loading="lazy"
+                    />loading="lazy"
                     />
                   </div>
                 </div>
@@ -334,114 +337,119 @@ function App() {
       <section id="experience" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-slate-800">
-            Professional Experience
+            My Experience: A Decade of Driving Financial Success
           </h2>
-          
-          {/* Glodinas Finance */}
-          <Card className="mb-8 p-6 hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex items-center gap-3 mb-2">
-                <Lightbulb className="w-8 h-8 text-blue-600" />
-                <CardTitle className="text-2xl text-blue-800">Glodinas Finance B.V.</CardTitle>
-              </div>
-              <CardDescription className="text-lg font-medium">Founder & AI Integration Leader</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-slate-600 mb-4">
-                Revolutionized traditional Dutch bookkeeping by integrating cutting-edge AI and machine learning technologies into core services.
-              </p>
-              <div className="grid md:grid-cols-3 gap-4 mb-4">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800 mb-2">15%</h4>
-                  <p className="text-sm text-slate-600">Reduction in client operational costs</p>
-                </div>
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800 mb-2">50+</h4>
-                  <p className="text-sm text-slate-600">Businesses guided through tax regulations</p>
-                </div>
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800 mb-2">40%</h4>
-                  <p className="text-sm text-slate-600">Reduction in administrative workload</p>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white"
-                  onClick={() => window.open('https://www.glodinasfinance.nl', '_blank')}
-                >
-                  <Globe className="w-4 h-4 mr-2" />
-                  Visit Website
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Glodinas Holding */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <Building className="w-8 h-8 text-blue-600" />
-                  <CardTitle className="text-xl text-blue-800">Glodinas Holding</CardTitle>
-                </div>
-                <CardDescription>Founder & Executive Oversight</CardDescription>
+                <Building className="w-12 h-12 text-blue-600 mb-4 transition-transform duration-300 hover:scale-110" />
+                <CardTitle className="text-blue-800">Glodinas Holding B.V.</CardTitle>
+                <CardDescription className="text-slate-600">Founder & CEO (2020 - Present)</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Founded and lead a diversified business holding company strategically managing a portfolio of specialized subsidiaries.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-slate-600">Annual Revenue Growth</span>
-                    <span className="font-semibold text-blue-800">35%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-600">Capital Allocation Efficiency</span>
-                    <span className="font-semibold text-blue-800">40%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-600">ROI on New Ventures</span>
-                    <span className="font-semibold text-blue-800">28%</span>
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white"
-                    onClick={() => window.open('https://www.glodinasholding.nl', '_blank')}
-                  >
-                    <Globe className="w-4 h-4 mr-2" />
-                    Visit Website
-                  </Button>
-                </div>
+                <ul className="list-disc list-inside text-slate-600 space-y-2">
+                  <li>
+                    Spearheaded the establishment and growth of Glodinas Holding, a diversified business group focusing on financial services, technology, and consulting.
+                  </li>
+                  <li>
+                    Developed and executed strategic business plans, leading to a 150% increase in client acquisition within the first two years.
+                  </li>
+                  <li>
+                    Cultivated a culture of innovation, integrating AI-driven solutions into core business processes to enhance efficiency and client value.
+                  </li>
+                </ul>
               </CardContent>
             </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <Users className="w-8 h-8 text-blue-600" />
-                  <CardTitle className="text-xl text-blue-800">Glodinas Flex Work B.V.</CardTitle>
-                </div>
-                <CardDescription>Founder & Workforce Solutions</CardDescription>
+                <Users className="w-12 h-12 text-blue-600 mb-4 transition-transform duration-300 hover:scale-110" />
+                <CardTitle className="text-blue-800">Investment Management Firm</CardTitle>
+                <CardDescription className="text-slate-600">Senior Financial Analyst (2015 - 2020)</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Revolutionized flexible employment models for Dutch businesses.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-slate-600">Client Retention</span>
-                    <span className="font-semibold text-blue-800">85%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-600">Cost Reduction</span>
-                    <span className="font-semibold text-blue-800">22%</span>
-                  </div>
-                  <div className="flex justify-between">
+                <ul className="list-disc list-inside text-slate-600 space-y-2">
+                  <li>
+                    Conducted in-depth financial analysis and market research to identify lucrative investment opportunities, contributing to a 25% portfolio growth.
+                  </li>
+                  <li>
+                    Managed a diverse portfolio of clients, providing tailored financial advice and developing personalized investment strategies.
+                  </li>
+                  <li>
+                    Led a team of junior analysts, mentoring them in financial modeling, risk assessment, and market trend analysis.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-slate-800">
+            What My Clients Say: Trust and Results
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                <CardContent className="p-0">
+                  <Quote className="w-8 h-8 text-blue-600 mb-4" />
+                  <p className="text-slate-700 italic mb-4">"{testimonial.text}"</p>
+                  <div className="font-semibold text-slate-800">{testimonial.name}</div>
+                  <div className="text-sm text-slate-500">{testimonial.company}</div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8 text-slate-800">
+            Let's Connect: Your Financial Future Starts Here
+          </h2>
+          <p className="text-lg text-slate-600 mb-8">
+            Ready to transform your financial landscape? Reach out to discuss how my expertise can benefit your business.
+          </p>
+          <div className="flex justify-center gap-6">
+            <Button 
+              variant="default" 
+              size="lg" 
+              className="flex items-center gap-2 hover:scale-105 transition-all duration-300 hover:shadow-lg"
+              onClick={() => window.location.href = 'mailto:cihartkaya@glodinas.nl'}
+            >
+              <Mail className="w-5 h-5" />
+              Email Me
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="flex items-center gap-2 hover:scale-105 transition-all duration-300 hover:shadow-lg"
+              onClick={() => window.open('https://linkedin.com/in/cihatkaya', '_blank')}
+            >
+              <Linkedin className="w-5 h-5" />
+              Connect on LinkedIn
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-800 text-white py-8 px-4">
+        <div className="max-w-6xl mx-auto text-center text-slate-400">
+          <p>&copy; {new Date().getFullYear()} Cihat Kaya. All rights reserved.</p>
+          <p className="mt-2">Designed and Developed with <span className="text-red-500">&hearts;</span> by Cihat Kaya</p>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default App
+ame="flex justify-between">
                     <span className="text-slate-600">Employee-Role Matching</span>
                     <span className="font-semibold text-blue-800">35%</span>
                   </div>
