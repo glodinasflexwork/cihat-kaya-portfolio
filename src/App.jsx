@@ -350,7 +350,7 @@ function App() {
               <p className="text-slate-600 mb-4">
                 Revolutionized traditional Dutch bookkeeping by integrating cutting-edge AI and machine learning technologies into core services.
               </p>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid md:grid-cols-3 gap-4 mb-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-blue-800 mb-2">15%</h4>
                   <p className="text-sm text-slate-600">Reduction in client operational costs</p>
@@ -363,6 +363,17 @@ function App() {
                   <h4 className="font-semibold text-blue-800 mb-2">40%</h4>
                   <p className="text-sm text-slate-600">Reduction in administrative workload</p>
                 </div>
+              </div>
+              <div className="mt-4">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white"
+                  onClick={() => window.open('https://www.glodinasfinance.nl', '_blank')}
+                >
+                  <Globe className="w-4 h-4 mr-2" />
+                  Visit Website
+                </Button>
               </div>
             </CardContent>
           </Card>
