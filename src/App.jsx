@@ -205,7 +205,7 @@ function App() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Founded and lead a diversified business holding company managing specialized subsidiaries.
+                  Founded and lead a diversified business holding company strategically managing a portfolio of specialized subsidiaries including Glodinas Finance B.V., Glodinas Makelaardij B.V., and Glodinas Flex Work B.V.
                 </p>
                 <div className="space-y-2">
                   <div className="flex justify-between">
@@ -220,6 +220,17 @@ function App() {
                     <span className="text-slate-600">ROI on New Ventures</span>
                     <span className="font-semibold text-blue-800">28%</span>
                   </div>
+                </div>
+                <div className="mt-4">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white"
+                    onClick={() => window.open('https://www.glodinasholding.nl', '_blank')}
+                  >
+                    <Globe className="w-4 h-4 mr-2" />
+                    Visit Website
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -250,40 +261,85 @@ function App() {
                     <span className="font-semibold text-blue-800">35%</span>
                   </div>
                 </div>
+                <div className="mt-4">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white"
+                    onClick={() => window.open('http://glodinasflexwork.nl', '_blank')}
+                  >
+                    <Globe className="w-4 h-4 mr-2" />
+                    Visit Website
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Other Experience */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <CardHeader>
-                <CardTitle className="text-xl text-blue-800">Heg Capital - CIO</CardTitle>
-                <CardDescription>Investment Leadership in Cryptocurrency</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-slate-600">
-                  <li>• <strong>45%</strong> outperformed market benchmarks</li>
-                  <li>• Protected capital during extreme volatility</li>
-                  <li>• <strong>65%</strong> improved client retention</li>
-                </ul>
-              </CardContent>
-            </Card>
+          {/* Glodinas Makelaardij */}
+          <Card className="mb-8 p-6">
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-2">
+                <Building className="w-8 h-8 text-blue-600" />
+                <CardTitle className="text-2xl text-blue-800">Glodinas Makelaardij B.V.</CardTitle>
+              </div>
+              <CardDescription className="text-lg font-medium">Founder & Real Estate Services</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-slate-600 mb-4">
+                Providing comprehensive real estate services in the Netherlands, specializing in residential and commercial property transactions with a focus on strategic investment opportunities and market analysis.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 mb-4">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-blue-800 mb-2">Expert</h4>
+                  <p className="text-sm text-slate-600">Market Analysis & Valuation</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-blue-800 mb-2">Full Service</h4>
+                  <p className="text-sm text-slate-600">Residential & Commercial</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-blue-800 mb-2">Strategic</h4>
+                  <p className="text-sm text-slate-600">Investment Advisory</p>
+                </div>
+              </div>
+              <div className="mt-4">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white"
+                  onClick={() => window.open('http://glodinasmakelaardij.nl', '_blank')}
+                >
+                  <Globe className="w-4 h-4 mr-2" />
+                  Visit Website
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="p-6">
-              <CardHeader>
-                <CardTitle className="text-xl text-blue-800">Rowelldmar Construction - CFO</CardTitle>
-                <CardDescription>Strategic Financial Leadership</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-slate-600">
-                  <li>• <strong>40%</strong> improved data accuracy</li>
-                  <li>• <strong>€175,000</strong> improved working capital</li>
-                  <li>• <strong>12%</strong> increased profit margins</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Strategic Leadership Experience */}
+          <Card className="mb-8 p-6">
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-2">
+                <TrendingUp className="w-8 h-8 text-blue-600" />
+                <CardTitle className="text-2xl text-blue-800">Strategic Leadership Experience</CardTitle>
+              </div>
+              <CardDescription className="text-lg font-medium">Investment & Financial Leadership</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-1 gap-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-800 mb-2">Heg Capital - CIO</h3>
+                  <p className="text-slate-600 mb-3">Investment Leadership in Cryptocurrency</p>
+                  <ul className="space-y-2 text-slate-600">
+                    <li>• <strong>45%</strong> outperformed market benchmarks</li>
+                    <li>• Protected capital during extreme volatility</li>
+                    <li>• <strong>65%</strong> improved client retention</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
