@@ -323,7 +323,6 @@ function App() {
                       alt={study.title} 
                       className="rounded-lg shadow-lg max-h-64 w-auto object-cover"
                       loading="lazy"
-                    />loading="lazy"
                     />
                   </div>
                 </div>
@@ -447,11 +446,5 @@ function App() {
     </div>
   )
 }
-
-export default App
-
-  )
-}
-
 export default App
 
